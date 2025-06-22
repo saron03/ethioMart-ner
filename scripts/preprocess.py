@@ -4,11 +4,11 @@ import regex as re
 def preprocess_text(text):
     if not isinstance(text, str):
         return ""
-    text = re.sub(r'[^\w\s]', '', text)  # Remove punctuation
-    text = re.sub(r'\s+', ' ', text).strip()  # Normalize spaces
+    text = re.sub(r'[^\w\s]', '', text)  
+    text = re.sub(r'\s+', ' ', text).strip()  
     return text
 
-def preprocess_data(input_file='data/telegram_data.xlsx', output_file='data/preprocessed_data.csv'):
+def preprocess_data(input_file='data/telegram_data.xlsx', output_file='report/preprocessed_data.csv'):
     df = pd.read_excel(input_file)
     if 'Message' not in df.columns:
         raise ValueError("No 'Message' column found in the input file.")

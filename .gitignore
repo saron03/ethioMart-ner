@@ -2,3 +2,7 @@ venv/
 data/
 *.pyc
 __pycache__/
+models/amharic_ner_xlmr
+notebooks/*.ipynb_checkpoints
+notebooks/results/checkpoint-5
+report/preprocessed_data.csv

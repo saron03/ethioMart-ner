@@ -6,3 +6,7 @@ models/amharic_ner_xlmr
 notebooks/*.ipynb_checkpoints
 notebooks/results/checkpoint-5
 report/preprocessed_data.csv
+
+model_comparison/results_bert-base-multilingual-cased
+model_comparison/results_distilbert-base-multilingual-cased
+model_comparison/results_xlm-roberta-base

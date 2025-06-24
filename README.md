@@ -1,28 +1,33 @@
-# Task 4 - Model Comparison and Evaluation
+# EthioMart NER: Amharic E-commerce Data Extractor
 
-## Overview
-This branch contains the implementation and evaluation of multiple machine learning models for [briefly describe your problem/task]. The goal is to compare model performance and select the best approach.
+A project to build an Amharic Named Entity Recognition (NER) system that extracts business-relevant information from Telegram e-commerce messages.
 
-## Contents
-- Model training scripts
-- Evaluation metrics and comparison
-- Visualizations of results
+## Goal
 
-## Usage
-1. Install required dependencies:
-```
-pip install -r requirements.txt
-```
+Help EthioMart centralize and analyze e-commerce activity by:
 
-2. Preparing train and val csv datas:
-```
-python prepare_data.py
-```
+- Extracting entities like **Product**, **Price**, and **Location** from Amharic messages.
+- Scoring vendors based on engagement and pricing to support **micro-lending** decisions.
 
-3. Evaluate and compare models using:
-```
-python compare_models.py
-```
+## Key Components
 
-## Notes
-- This branch focuses solely on model comparision and evaluation.
+- **Data Ingestion**: Collect messages from Telegram channels.
+- **Preprocessing**: Clean and prepare Amharic text.
+- **Labeling**: Manually tag 30–50 messages using CoNLL format.
+- **Model Fine-tuning**: Train transformer models (e.g., XLM-R) on labeled data.
+- **Evaluation**: Compare models using F1-score and explain predictions with SHAP/LIME.
+- **Vendor Scorecard**: Rank vendors by activity, engagement, and pricing.
+
+## Outputs
+
+- `preprocessed_data.csv`: Cleaned messages
+- `labeled_data.conll`: Labeled NER training data
+- `fine-tuned model`: For extracting entities
+- `vendor_scorecard.csv`: Vendor metrics and lending scores
+
+## Timeline
+
+- **Interim Submission**: 22 June 2025  
+- **Final Submission**: 24 June 2025
+
+---

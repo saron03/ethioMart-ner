@@ -1,33 +1,50 @@
 # EthioMart NER: Amharic E-commerce Data Extractor
 
-A project to build an Amharic Named Entity Recognition (NER) system that extracts business-relevant information from Telegram e-commerce messages.
+## Task 5: Model Interpretability — NER Project
 
-## Goal
-
-Help EthioMart centralize and analyze e-commerce activity by:
-
-- Extracting entities like **Product**, **Price**, and **Location** from Amharic messages.
-- Scoring vendors based on engagement and pricing to support **micro-lending** decisions.
-
-## Key Components
-
-- **Data Ingestion**: Collect messages from Telegram channels.
-- **Preprocessing**: Clean and prepare Amharic text.
-- **Labeling**: Manually tag 30–50 messages using CoNLL format.
-- **Model Fine-tuning**: Train transformer models (e.g., XLM-R) on labeled data.
-- **Evaluation**: Compare models using F1-score and explain predictions with SHAP/LIME.
-- **Vendor Scorecard**: Rank vendors by activity, engagement, and pricing.
-
-## Outputs
-
-- `preprocessed_data.csv`: Cleaned messages
-- `labeled_data.conll`: Labeled NER training data
-- `fine-tuned model`: For extracting entities
-- `vendor_scorecard.csv`: Vendor metrics and lending scores
-
-## Timeline
-
-- **Interim Submission**: 22 June 2025  
-- **Final Submission**: 24 June 2025
+This task focuses on explaining how a Named Entity Recognition (NER) model makes its predictions using two popular model interpretability tools: **SHAP (SHapley Additive exPlanations)** and **LIME (Local Interpretable Model-agnostic Explanations)**. The aim is to build transparency and trust in the system, especially when handling ambiguous or challenging text.
 
 ---
+
+## Objectives
+
+- Apply SHAP and LIME to interpret the model’s decision-making process.
+- Analyze difficult or ambiguous sentences where the model may misidentify entities.
+- Generate visual and written reports that highlight how the model arrives at predictions.
+- Use insights to propose ways to improve the model.
+
+---
+
+## Tools & Libraries Used
+
+- Python 3.x
+- Hugging Face `transformers`
+- `shap`
+- `lime`
+- `torch`
+- `sklearn`
+- `matplotlib`, `seaborn`
+
+---
+
+## How to Run
+
+### 1. Analyze Difficult Cases
+Run ambiguous text examples to identify where the model struggles:
+```bash
+python model_interpretability/difficult_cases_analysis.py
+```
+
+2. SHAP Interpretability
+Visualize token contributions using SHAP:
+```bash
+python model_interpretability/shap_interpretation.py
+``` 
+
+3. LIME Interpretability
+Generate interactive HTML visualizations using LIME:
+```bash
+python model_interpretability/lime_interpretation.py
+```
+
+- Outputs/visualizations are saved in the outputs/ directory.

@@ -1,0 +1,10 @@
+[
+    {
+        "text": "Apple is looking at buying a startup in the UK.",
+        "expected": ["ORG", "LOC"]
+    },
+    {
+        "text": "The Amazon river flows through Brazil.",
+        "expected": ["LOC"]
+    }
+]
